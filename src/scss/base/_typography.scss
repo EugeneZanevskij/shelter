@@ -1,0 +1,91 @@
+h1,
+h2, 
+h3, 
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Georgia';
+    @include font(2.75rem);
+    @include respond-to(small){
+        @include font(rem(25));
+        letter-spacing: 0.06em;
+    }
+}
+h3 {
+    font-family: 'Georgia';
+    @include font(rem(35));
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    
+    @include respond-to(small){
+        @include font(rem(25));
+    }
+}
+h4 {
+    font-family: 'Georgia';
+    @include font(1.25rem, 400, 115%);
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    @include respond-to(small) {
+        @include font(rem(15), 400, 110%);
+    }
+}
+h5 {
+    font-family: 'Georgia';
+    @include font(rem(15), 400, 110%);
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+    @include respond-to(small) {
+        letter-spacing: 0;
+        line-height: 160%;
+    }
+    .h5-modal-window {
+        font-weight: 700;
+    }
+}
+
+
+.paragraph-l {
+    font-family: 'Arial';
+    @include font(rem(15), 400, 160%);
+    color: $color-dark-xl;
+}
+
+.paragraph-s {
+    font-family: 'Arial';
+    font-style: italic;
+    @include font(rem(12), 400, 150%);
+}
+
+.paragraph-mobile-menu {
+    @include respond-to(toggle) {
+        font-family: 'Arial';
+        @include font(2rem, 400, 160%);
+    }
+}
+
+.logo__title {
+    font-family: 'Georgia';
+    @include font(2rem, 400, 110%);
+    letter-spacing: 0.06em;
+    color: $color-primary;
+
+    &--pets {
+        color: $color-dark-l;
+    }
+}
+.logo__subtitle {
+    font-family: 'Arial';
+    @include font(rem(13), 400, rem(15));
+    letter-spacing: 0.1em;
+    color: $color-light-xl;
+
+    &--pets {
+        color: $color-dark-3xl;
+    }
+}

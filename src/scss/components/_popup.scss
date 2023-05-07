@@ -1,0 +1,118 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: rem(900);
+    max-width: 85%;
+
+    @include respond-to(large) {
+        width: rem(630);
+    }
+    @include respond-to(medium) {
+        width: rem(220);
+    }
+
+    &.active {
+        display: block;
+    }
+
+    &__container {
+        position: relative;
+        background: $color-light-s;
+        border-radius: 0.5625rem;
+        box-shadow: 0 rem(2) rem(35) rem(14) rgba(13, 13, 13, 0.04);
+        @include flex(row, flex-start, flex-start);
+    }
+
+    &__image {
+        // width: 55.5%;
+        flex: 5;
+        img {
+            @include max-size(rem(500));
+            
+            @include respond-to(large) {
+                width: rem(350);
+            }
+        }
+
+        @include respond-to(medium) {
+            display: none;
+        }
+    }
+    
+    &__content {
+        // @include flex();
+        @include flex(column, flex-start, flex-start);
+        padding: rem(50) rem(20) 0 rem(29);
+        gap: 2.5rem;
+        flex: 4;
+        // width: 44.4%;
+        // width: rem(351);
+        // @include max-size(rem(351));
+        * {
+            color: #000;
+        }
+        
+        @include respond-to(large) {
+            width: rem(260);
+            padding: rem(10) rem(9) 0 rem(11);
+            gap: 1.25rem;
+        }
+        @include respond-to(medium) {
+            // width: 100%;
+        }
+        @include respond-to(small) {
+            padding: rem(10);
+            align-items: center;
+        }
+    }
+
+    &__primary {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+        @include respond-to (small) {
+            align-items: center;
+        }
+    }
+
+    &__name {
+        font-size: 2.1875rem;
+    }
+    &__breed {
+        font-size: 1.25rem;
+    }
+
+    &__description {
+        @include respond-to(large) {
+            font-size: rem(13);
+        }
+        @include respond-to(small) {
+            text-align: justify;
+            align-self: start;
+        }
+    }
+    
+    &__secondary {
+        display: flex;
+        flex-direction: column;
+        gap: rem(5);
+
+        &>li {
+            list-style-type: disc;
+            color: $color-primary;
+            margin-left: rem(15);
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: rem(-52);
+        right: rem(-42);
+        padding: 1.25rem;
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+    }
+}

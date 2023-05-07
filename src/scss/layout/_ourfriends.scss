@@ -1,0 +1,79 @@
+.ourfriends {
+    padding: 5rem 0 6.25rem;
+    background-color: $color-light-l;
+    
+    @include respond-to (small) {
+        padding: 2.625rem 0 2.625rem;
+    } 
+
+    &__container {
+        @include flex;
+        gap: 3.75rem;
+        
+        @include respond-to (small) {
+            gap: 2.625rem;
+        } 
+    }
+
+    &__title {
+        max-width: 25rem;
+        text-align: center;
+    }
+
+    &__carousel {
+        @include flex(row,space-between);
+        width: 100%;
+        gap: rem(53);
+        
+        @include respond-to (large) {
+            gap: rem(12);
+        } 
+        @include respond-to (medium) {
+            flex-wrap: wrap;
+        }
+        @include respond-to (small) {
+            gap: 1.25rem;
+        } 
+    }
+
+    &__button-arrow {
+        padding: rem(21) rem(18);
+        font-size: 14px;
+        line-height: 6px;
+        
+        i, i::before {
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        &__left {
+            @include respond-to(medium) {
+                order: 1;
+                margin-left: rem(58);
+            }
+        }
+        &__right {
+            @include respond-to(medium) {
+                order: 2;
+                margin-right: rem(58);
+            }
+        }
+    }
+
+    &__cards {
+        @include flex(row, space-between);
+        width: 100%;
+
+        @include respond-to (small) {
+            justify-content: center;
+        } 
+    }
+
+    &__card {
+        // @include respond-to (xlarge) {
+        //     &:last-child {
+        //         display: none;
+        //     }
+        // } 
+    }
+}

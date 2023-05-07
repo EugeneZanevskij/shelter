@@ -1,0 +1,56 @@
+.notonly {
+    &__container {
+        @include flex(row, space-between, flex-start);
+        gap: rem(42);
+
+        @include respond-to(xlarge) {
+            flex-direction: column;
+            align-items: flex-end;
+            gap: rem(100);
+        }
+        @include respond-to(small) {
+            gap: rem(105);
+        }
+    }
+
+    &__content {
+        margin-top: rem(162);
+        @include flex(column, center, flex-start);
+        gap: rem(42);
+        max-width: 460px;
+        
+        @include respond-to(xlarge) {
+            margin: 0 auto;
+        }
+
+        @include respond-to(small) {
+            text-align: center;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        color: $color-light-xl;
+        max-width: rem(310);
+    }
+
+    &__text {
+        color: $color-dark-s;
+    }
+
+    &__btn {
+        @include respond-to(large) {
+            align-self: center;
+        }
+    }
+    &__image img {
+        @include max-size();
+        
+        @include respond-to(large) {
+            @include max-size(rem(569));
+        }
+        @include respond-to(small) {
+            @include max-size(rem(260));
+        }
+    }
+}

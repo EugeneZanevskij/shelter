@@ -1,0 +1,33 @@
+.card {
+    @include flex;
+    gap: rem(30);
+    max-width: rem(270);
+    background-color: $color-light-s;
+    border-radius: rem(9);
+
+    &:hover {
+        cursor: pointer;
+        background-color: $color-light-xl;
+        box-shadow: 0 rem(2) rem(35) rem(14) rgba(13, 13, 13, 0.04);
+
+        .card__button {
+            border-color: $color-primary-light;
+            background-color: $color-primary-light;
+        }
+    }
+
+    &__image img {
+        @include max-size(rem(270));
+    }
+    
+    &__name {
+        font-family: 'Georgia';
+        @include font(1.25rem, 400, rem(23));
+        letter-spacing: 0.06em;
+        color: $color-dark-l;
+    }
+
+    &__button {
+        margin-bottom: rem(30);
+    }
+}

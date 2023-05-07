@@ -1,0 +1,29 @@
+.button {
+    font-family: 'Georgia';
+    @include font(rem(17));
+    letter-spacing: 0.06em;
+    color: $color-dark-3xl;
+    padding: rem(13) rem(45);
+    border-radius: rem(100);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s all;
+
+    &:hover {
+        background-color: $color-primary-light;
+    }
+
+    &__primary {
+        background-color: $color-primary;
+    }
+
+    &__secondary {
+        border: 2px solid $color-primary;
+        
+        &:hover {
+            // border: none;
+            border-color: $color-primary-light;
+        }
+    }
+}

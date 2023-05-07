@@ -1,0 +1,75 @@
+.footer {
+    background: $footer-gradient-background;
+    padding: rem(56) 0 0;
+
+    @include respond-to(large) {
+        padding-top: rem(30);
+    }
+    
+    &__container {
+        @include flex(row, space-between, flex-start);
+        flex-wrap: wrap;
+        
+        @include respond-to(xlarge) {
+            justify-content: center;
+            gap: rem(65) rem(60);
+        }
+
+        @include respond-to(small) {
+            gap: 2.5rem;
+        }
+    }
+
+    &__col {
+        @include flex;
+        align-items: start;
+    }
+
+    &__title {
+        color: $color-light-xl;
+
+        @include respond-to(small) {
+            text-align: center;
+            max-width: rem(270);
+            margin: 0 auto;
+        }
+    }
+
+    &__item {
+        @include flex(row);
+        gap: rem(20);
+    }
+
+    &__item-text {
+        color: $color-primary;
+        font-size: 1.25rem;
+    }
+
+    &__contacts {
+        max-width: 17.395rem;
+        gap: rem(40);
+
+        @include respond-to(small) {
+            align-items: center;
+        }
+    }
+    &__locations {
+        max-width: rem(302);
+        gap: rem(33);
+        
+        @include respond-to(small) {
+            gap: 2.5rem;
+        }
+    }
+    &__img {
+        @include max-size(rem(300));
+        margin-top: -1rem;
+
+        @include respond-to(large) {
+            margin-top: 0;
+        }
+        @include respond-to(small) {
+            width: rem(260);
+        }
+    }
+}

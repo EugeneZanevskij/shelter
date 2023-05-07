@@ -1,0 +1,62 @@
+.help {
+    padding: rem(80) 0 6.25rem;
+
+    @include respond-to (small) {
+        padding: 2.625rem 0 2.625rem;
+    } 
+
+    &__container {
+        @include flex;
+        gap: 3.75rem;
+        
+        @include respond-to (small) {
+            gap: 2.625rem;
+        } 
+    }
+
+    &__title {
+        max-width: rem(310);
+        text-align: center;
+        
+        @include respond-to (small) {
+            max-width: rem(225);
+        } 
+    }
+
+    &__items {
+        @include flex(row);
+        gap: rem(55) 7.5rem;
+        flex-wrap: wrap;
+        
+        @include respond-to(large) {
+            gap: rem(55) rem(60);
+        }
+        
+        @include respond-to (small) {
+            justify-content: space-between;
+            gap: rem(30);
+            padding: 0 rem(5);
+        } 
+    }
+
+    &__item {
+        @include flex;
+        gap: rem(30);
+        
+        @include respond-to(large) {
+            width: rem(170);
+        }
+        @include respond-to(small) {
+            width: rem(130);
+            gap: rem(20);
+        }
+        
+        &-img {
+            @include max-size(rem(60));
+
+            @include respond-to(small) {
+                @include max-size(rem(50));
+            }
+        }
+    }
+}

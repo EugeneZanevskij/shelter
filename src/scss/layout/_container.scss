@@ -1,0 +1,13 @@
+.container {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0 rem(40);
+
+    @include respond-to(large) {
+        padding: 0 rem(30);
+    }
+
+    @include respond-to(medium) {
+        padding: 0 rem(10);
+    }
+}

@@ -1,0 +1,52 @@
+.about {
+    padding: rem(80) 0 6.25rem;
+    @include respond-to (small) {
+        padding: 2.625rem 0 2.625rem;
+    } 
+
+    &__container {
+        @include flex(row);
+        gap: 7.5rem;
+        
+        @include respond-to(large) {
+            flex-direction: column-reverse;
+            gap: 5rem;
+        }
+        @include respond-to(small) {
+            gap: 2.625rem;
+        }
+    }
+    
+    &__content {
+        @include flex();
+        align-items: start;
+        max-width: rem(430);
+        gap: rem(25);
+
+        @include respond-to (small) {
+            padding: 0 0.9375rem;
+        } 
+    }
+
+    &__title {
+        max-width: rem(370);
+
+        @include respond-to (small) {
+            text-align: center;
+        } 
+    }
+
+    &__text {
+        @include respond-to (small) {
+            text-align: justify
+        } 
+    }
+    
+    &__image>img {
+        @include max-size(18.75rem);
+        
+        @include respond-to(small) {
+            @include max-size(rem(260));
+        }
+    }
+}

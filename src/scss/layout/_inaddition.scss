@@ -1,0 +1,65 @@
+.inaddition {
+    padding: 5rem 0 6.25rem;
+    background-color: $color-light-l;
+
+    @include respond-to (small) {
+        padding: 2.625rem 0 2.625rem;
+    } 
+
+    &__container {
+        @include flex(row);
+        gap: rem(30);
+        
+        @include respond-to(large) {
+            flex-direction: column-reverse;
+            gap: rem(60);
+        }
+        @include respond-to(small) {
+            gap: 2.625rem;
+        }
+    }
+    
+    &__content {
+        @include flex;
+        align-items: start;
+        gap: rem(20);
+        max-width: rem(380);
+        
+        @include respond-to (small) {
+            align-items: center;
+            text-align: center;
+        } 
+    }
+
+    &__title {
+        max-width: rem(300);
+    }
+
+    &__credit-card {
+        padding: rem(10) rem(15);
+        background-color: $color-primary;
+        border-radius: rem(9);
+        @include flex(row);
+        gap: rem(15);
+    }
+
+    &__legal {
+        font-family: 'Arial';
+        font-style: italic;
+        @include font(0.75rem, 400, 1.125rem);
+        color: $color-dark-m;
+
+        @include respond-to(small) {
+            text-align: justify;
+            padding: 0 0.625rem;
+        }
+    }
+
+    &__image img {
+        @include max-size();
+        
+        @include respond-to(small) {
+            @include max-size(rem(260));
+        }
+    }
+}

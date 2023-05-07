@@ -1,0 +1,61 @@
+.pets {
+    padding: 5rem 0 6.25rem;
+    background-color: $color-light-l;
+
+    @include respond-to(large) {
+        padding-bottom: rem(75);
+    }
+
+    @include respond-to (small) {
+        padding: 2.625rem 0 2.625rem;
+    } 
+
+    &__container {
+        @include flex;
+        gap: 3.75rem;
+
+        @include respond-to(large) {
+            gap: 1.875rem;
+        }
+        @include respond-to(small) {
+            gap: 2.625rem;
+        }
+    }
+
+    &__title {
+        max-width: 25rem;
+        text-align: center;
+    }
+
+    &__carousel {
+        @include flex(row);
+        gap: rem(53);
+    }
+
+    &__button-arrow {
+        padding: rem(21) rem(18);
+        font-size: 14px;
+        line-height: 6px;
+        
+        i, i::before {
+            font-size: inherit;
+            line-height: inherit;
+            // font-size: rem(6);
+            // @include size(rem(14), rem(6));
+            // line-height: rem(6);
+        }
+    }
+
+    &__cards {
+        @include flex(row);
+        gap: rem(30) rem(40);
+        flex-wrap: wrap;
+
+        @include respond-to(large) {
+            margin-bottom: rem(10);
+        }
+        @include respond-to(small) {
+            margin-bottom: 0;
+        }
+    }
+}

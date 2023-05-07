@@ -1,0 +1,42 @@
+.nav {
+    @include flex(row);
+    gap: 2.1875rem;
+
+    @include respond-to(toggle) {
+        @include flex;
+        gap: 0;
+        text-align: center;
+    }
+    
+    &__item {
+        padding: 1rem 0 1.25rem 0;
+
+        @include respond-to(toggle) {
+            width: 100%;
+            padding: 1.25rem 0;
+        }
+    }
+
+    &__link{
+        display: block;
+        color: $color-dark-s;
+        transition: 0.5s all;
+        
+        &.active,
+        &:hover {
+            color: $color-light-s;
+        }
+        &.active {
+            border-bottom: rem(3) solid $color-primary;
+        }
+
+        &--pets {
+            color: $color-dark-l;
+
+            &.active,
+            &:hover {
+                color: $color-dark-3xl;
+            }
+        }
+    }
+}
